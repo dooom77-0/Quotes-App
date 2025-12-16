@@ -10,6 +10,10 @@ export default function QuotesPage() {
     const random = Quotes[Math.floor(Math.random() * Quotes.length)];
     setQuote(random);
   }
+  function clipboard() {
+    navigator.clipboard.writeText(`${quote.content} — ${quote.author}`);
+    alert("تم النسخ");
+  }
 
   return (
     <div className="p-6 text-center">
@@ -17,13 +21,21 @@ export default function QuotesPage() {
       <p className="text-stone-700 mb-5">{quote.tags}</p>
       <p className="text-xl">“{quote.content}”</p>
       <p className="mt-2 text-stone-700">— {quote.author}</p>
+      <div className="mt-10 flex flex-col">
+        <button
+          onClick={getNewQuote}
+          className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded"
+        >
+          اقتباس جديد
+        </button>
 
-      <button
-        onClick={getNewQuote}
-        className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded"
-      >
-        اقتباس جديد
-      </button>
+        <button
+          onClick={clipboard}
+          className="mt-4 px-4 py-2 bg-green-500 text-white rounded"
+        >
+          نسخ
+        </button>
+      </div>
     </div>
   );
 }
