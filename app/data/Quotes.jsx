@@ -21,17 +21,17 @@ export default function QuotesPage() {
       <p className="text-stone-700 mb-5">{quote.tags}</p>
       <p className="text-xl">“{quote.content}”</p>
       <p className="mt-2 text-stone-700">— {quote.author}</p>
-      <div className="mt-10 flex flex-col">
+      <div className="mt-10 flex flex-col justify-center items-center">
         <button
           onClick={getNewQuote}
-          className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded"
+          className="w-auto mt-4 px-4 py-2 bg-indigo-500 text-white rounded"
         >
           اقتباس جديد
         </button>
 
         <button
           onClick={clipboard}
-          className="mt-4 px-4 py-2 bg-green-500 text-white rounded"
+          className="w-auto mt-4 px-6 py-2 bg-green-600 text-white rounded"
         >
           نسخ
         </button>
