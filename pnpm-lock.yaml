@@ -17,6 +17,9 @@ importers:
       react-dom:
         specifier: 19.2.1
         version: 19.2.1(react@19.2.1)
+      sweetalert2:
+        specifier: ^11.26.10
+        version: 11.26.10
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -1758,6 +1761,9 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  sweetalert2@11.26.10:
+    resolution: {integrity: sha512-l/aaL9WWbumBOaMvcs4aCKzyQwkQCplSmSGpJD7FuRcSDWZyr2OEDmtcSPj2/w3N2TC2xw48Vg5cL6IkUJnPlQ==}
 
   tailwindcss@4.1.18:
     resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
@@ -3786,6 +3792,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  sweetalert2@11.26.10: {}
 
   tailwindcss@4.1.18: {}
 

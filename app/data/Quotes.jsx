@@ -1,7 +1,7 @@
 "use client"
-
+import Swal from "sweetalert2";
 import { useState } from "react";
-import Quotes from "./Quotes.json"; // ملفك المحلي
+import Quotes from "./Quotes.json"; // ملفي المحلي
 
 export default function QuotesPage() {
   const [quote, setQuote] = useState(Quotes[0]);
@@ -12,7 +12,12 @@ export default function QuotesPage() {
   }
   function clipboard() {
     navigator.clipboard.writeText(`${quote.content} — ${quote.author}`);
-    alert("تم النسخ");
+    Swal.fire({
+      icon: "success",
+      title: "تم نسخ الاقتباس",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   }
 
   return (
